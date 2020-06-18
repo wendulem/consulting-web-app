@@ -113,7 +113,7 @@ class Homepage extends React.Component {
           </Row>
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          <a>Employee Sales Portal</a> <br />
+          <a href="www.google.com">Employee Sales Portal</a> <br />
           Maia Consulting ©2020 Created by Connor Johnson
         </Footer>
       </Layout>
