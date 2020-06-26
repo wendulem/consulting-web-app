@@ -8,15 +8,15 @@ import {
   Button,
   PageHeader,
   Typography,
-  Divider
+  Divider,
 } from "antd";
 import {
   ExperimentOutlined,
   DatabaseOutlined,
   CodeOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import geogif from "../assets/geometric-gif-png-1.gif";
-//import GridDisplay from "../components/layout/GridDisplay";
 
 const { Content, Footer } = Layout;
 const { Title } = Typography;
@@ -32,9 +32,11 @@ class Homepage extends React.Component {
             subTitle="Maia Consulting"
             extra={[
               <Button key="2">Get Quote</Button>,
-              <Button key="1" type="primary">
-                Home
-              </Button>,
+              <Link to="/home">
+                <Button key="1" type="primary">
+                  Home
+                </Button>
+              </Link>,
             ]}
             avatar={{
               src:
@@ -113,7 +115,8 @@ class Homepage extends React.Component {
           </Row>
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          <a href="www.google.com">Employee Sales Portal</a> <br />
+          <Link to="/sales">Employee Sales Portal</Link>
+          <br />
           Maia Consulting ©2020 Created by Connor Johnson
         </Footer>
       </Layout>
