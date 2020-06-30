@@ -46,11 +46,7 @@ class Sales extends React.Component {
             <Link to="/home">
               <PageHeader
                 ghost={false}
-                subTitle="Maia Consulting"
-                avatar={{
-                  src:
-                    "https://www.onlygfx.com/wp-content/uploads/2015/12/spiral-circle-logo-template.jpg",
-                }}
+                subTitle="Quix Consult"
               ></PageHeader>
             </Link>
           </Affix>

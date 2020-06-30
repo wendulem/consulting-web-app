@@ -1,14 +1,34 @@
-import React from "react";
-import { Card, Button, Form, Input} from "antd";
+import React, { useContext } from "react";
+import { Card, Button, Form, Input } from "antd";
+import ThemeContext from "../context/ThemeContext";
+import axios from "axios";
 
 function RegisterCard() {
+  //probably wanna rename this context at some point too lazy now
+  const context = useContext(ThemeContext);
+  const { token, setToken } = context;
+
   const onFinish = (values) => {
+    var formData = new FormData();
+    formData.append('username', values.username);
+    formData.append('password', values.password);
+
     console.log("Success:", values);
+    axios
+      .post("http://localhost:3000/users", formData)
+      .then((res) => {
+        console.log("test");
+        //setToken(res.token);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
   return (
     <Card>
       <Form
