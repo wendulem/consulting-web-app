@@ -9,12 +9,15 @@ import {
   PageHeader,
   Divider,
 } from "antd";
-import { FacebookFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import logo from "../assets/quix logo.svg";
-import graphic1 from "../assets/team_presentation_two_color.svg";
+import graphic1 from "../assets/coding__two_color.svg";
 import graphic2 from "../assets/analyzing_process_two_color.svg";
 import graphic3 from "../assets/team_presentation_two_color_1.svg";
+import pandaslogo from "../assets/pandas.svg";
+import pytorchlogo from "../assets/pytorch.svg";
+import tensorflowlogo from "../assets/tensorflow-tf.svg";
+import awslogo from "../assets/Amazon_Web_Services_Logo.svg";
 
 const { Content, Footer } = Layout;
 const { Title, Text } = Typography;
@@ -42,25 +45,98 @@ class Homepage extends React.Component {
           ></PageHeader>
         </Affix>
         <Content className="site-layout-background">
-          <Row>
-            <Col span={12}>
-              <img src={logo} alt="loading..." />
+          <Row style={{ textAlign: "center" }}>
+            <Col span={2} />
+            <Col span={9}>
+              <img
+                src={logo}
+                alt="loading..."
+                style={{
+                  height: "220px",
+                  width: "140%",
+                  "padding-top": "30px",
+                }}
+              />
+              <Title
+                style={{
+                  color: "#00009c",
+                  "font-size": "25px",
+                  position: "absolute",
+                  left: "310px",
+                  top: "180px",
+                  "z-index": "1",
+                }}
+              >
+                Welcome to the Cutting Edge
+              </Title>
+              <div
+                style={{
+                  "font-size": "20px",
+                  "padding-left": "290px",
+                  "padding-top": "5px",
+                }}
+              >
+                <Text>
+                  Bring your small/medium-sized business out of the past and
+                  into the future and with our blue-chip engineering talent.
+                </Text>
+              </div>
+              {/* <Text style={{ "font-size": "20px", "padding-left": "190px" }}>
+                experience for all
+              </Text>
+              <br />
+              <Text style={{ "font-size": "20px", "padding-left": "230px" }}>
+                your business' needs.
+              </Text> */}
             </Col>
-            <Col span={10}>
+            <Col span={9}>
               <img src={graphic1} alt="loading..." />
             </Col>
-            <Col span={2} />
-          </Row>
-          <Row>
             <Col span={4} />
-            <Col span={10}>
-              <Title style={{ color: "#00009c" }}>
-                Your bussiness' technology ally.
-              </Title>
-            </Col>
-            <Col span={8}></Col>
           </Row>
-          <Divider dashed />
+          <Divider />
+          <Row style={{ textAlign: "center" }}>
+            <Col span={6} />
+            <Col span={12}>
+              <Text style={{ color: "#00009c", "font-size": "20px" }}>
+                Our team has on-job experience with industry-leading tools.
+              </Text>
+            </Col>
+            <Col span={6}></Col>
+          </Row>
+          <Row style={{ textAlign: "center", "padding-top": "10px" }}>
+            <Col span={6} />
+            <Col span={3}>
+              <img
+                src={pandaslogo}
+                alt="loading..."
+                style={{ height: "100px", width: "60%" }}
+              />
+            </Col>
+            <Col span={3}>
+              <img
+                src={pytorchlogo}
+                alt="loading..."
+                style={{ height: "100px", width: "60%" }}
+              />
+            </Col>
+            <Col span={3}>
+              <img
+                src={awslogo}
+                alt="loading..."
+                style={{ height: "100px", width: "40%" }}
+              />
+            </Col>
+            <Col span={3}>
+              <img
+                src={tensorflowlogo}
+                alt="loading..."
+                style={{ height: "100px", width: "32%" }}
+              />
+            </Col>
+            <Col span={6} />
+          </Row>
+          <Divider />
           <Row
             gutter={[20, { xs: 8, sm: 16, md: 24, lg: 110 }]}
             style={{ textAlign: "center" }}
@@ -71,24 +147,51 @@ class Homepage extends React.Component {
             </Col>
 
             <Col span={10}>
-              <Title style={{ color: "#00009c" }}>AI Solutions</Title>
+              <Title
+                style={{
+                  color: "#00009c",
+                  "font-size": "105px",
+                  "padding-top": "50px",
+                }}
+              >
+                Data Analysis & AI Solutions
+              </Title>
+            </Col>
+            <Col span={2} />
+          </Row>
+          <Row>
+            <Col span={2} />
+            {/* This text needs to scale appropriately */}
+            <Col span={20} style={{ "text-align": "center" }}>
+              <Text style={{ "font-size": "20px" }}>
+                Our team has years of development experience using cutting-edge
+                techniques in the fields of machine learning and data science.
+              </Text>
+            </Col>
+          </Row>
+          <Divider dashed />
+          <Row
+            gutter={[20, { xs: 8, sm: 16, md: 24, lg: 110 }]}
+            style={{ textAlign: "center" }}
+          >
+            <Col span={2} />
+
+            <Col span={10}>
+              <Title style={{ color: "#00009c" }}>Software Engineering</Title>
               {/* This text needs to scale appropriately */}
               <Text>
-                We offer premier AI solutions to drive sales and maximize your
-                business' earning potential. Using our years of experience in
-                data science and computer vision research, we can leverage
-                various linear and non-linear models to find underlying trends
-                in your data to improve all aspects of your business.
+                You name it; we build it. We can build custom software and web
+                applications for your business' needs.
               </Text>
               <br />
               <br />
-              <FacebookFilled style={{ fontSize: "50px", color: "#00009c" }} />
-              <br />
-              <br />
-              <Text>
-                We can integrate into your current advertising strategy and
-                improve on your process.
-              </Text>
+              We can integrate AI solutions and infrastructure decisions with
+              software built for your needs as a consumer. CMS portals,
+              data-entry, and data-visualization options are all in play, along
+              with much more.
+            </Col>
+            <Col span={10}>
+              <img src={graphic3} alt="loading..." />
             </Col>
             <Col span={2} />
           </Row>
@@ -100,7 +203,7 @@ class Homepage extends React.Component {
             <Col span={2} />
 
             <Col span={10}>
-              <Title style={{ color: "#00009c" }}>Software Engineering</Title>
+              <Title style={{ color: "#00009c" }}>Tech Infrastructure</Title>
               {/* This text needs to scale appropriately */}
               <Text>
                 You name it; we build it. We can build custom software and web
